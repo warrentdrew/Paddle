@@ -111,7 +111,6 @@ std::vector<paddle::Tensor> RunBackward(
     const std::vector<paddle::Tensor>& no_grad_vars = {}) {
   VLOG(3) << "Start Backward";
 
-  auto place = egr::Controller::Instance().GetExpectedPlace();
 
   // *Gradient Hook should happen at node-level
   // *Inplace version check should perform at node-level
